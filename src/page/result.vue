@@ -4,8 +4,7 @@
     <div class='mb40' v-for='result in $store.state.result'>
       <h2>{{result.item.name}}</h2>
       <p>{{result.item.discription}}</p>
-      <!-- <commit-chart :data="result.item.chart"></commit-chart> -->
-      <commit-chart></commit-chart>
+      <commit-chart :data="result.item.chart" class='mb20'></commit-chart>
     </div>
     <router-link class='btn btn-primary btn-lg btn-block' tag="div" to="/">はじめからやり直す</router-link>
   </div>
@@ -41,16 +40,16 @@
 </script>
 <style scoped>
 h2 {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 10px;
     border-bottom: 1px solid #aaa;
     margin-bottom: 20px;
-  } 
+  }
 
 .mb20 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 </style>

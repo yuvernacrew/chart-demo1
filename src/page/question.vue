@@ -34,7 +34,7 @@ export default question
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .question {
-    margin-top: 40px;
+    margin-top: 160px;
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 10px;
