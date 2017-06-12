@@ -6,6 +6,7 @@
       </div>
       <div class='btn btn-default btn-lg btn-block answer-btn' v-for='answer in $store.state.data[$store.state.questId].answers'>
         <a @click="onClickAnswer(answer)">{{answer.text}}</a>
+        <p>{{$store.state.data[$store.state.questId].answer.point}}</p>
       </div>
     </div>
 </template>

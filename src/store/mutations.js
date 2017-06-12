@@ -5,12 +5,13 @@ export default {
   answer (state, ans) {
     if (state.answers.length < state.data.length) {
       //選ばれた選択肢をpush
-      state.answers.push(ans.id)
+      // state.answers.push(ans.id)
+      state.points += ans.point
     }
     //idを追加していく,3問目が終わったらelseへ
     if (state.questId < 10) {
       state.item = state.data[state.questId]
-      state.point += state.data[state.questId].point
+      // state.points +=
       state.questId++
     } else {
         //idが加算されきったら、resultへ
@@ -26,6 +27,7 @@ export default {
   //stateを空にする処理
   initialize (state) {
     state.answers = []
+    state.points = []
     state.questId = 0
   }
 }

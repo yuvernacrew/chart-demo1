@@ -8,7 +8,7 @@ Vue.use(Vuex)
 
 const state = {
   questId: 0,
-  point:[],
+  points:[],
   answers: [],
   result: {},
   data: constants.data,

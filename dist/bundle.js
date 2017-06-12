@@ -35826,10 +35826,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: []
+      point: [3, 5, 3, 3, 4, 4, 4]
     }, {
       id: 1,
-      text: 'いいえ'
+      text: 'いいえ',
+      point: [2, 0, 2, 2, 1, 1, 1]
     }]
   }, {
     question: {
@@ -35839,10 +35840,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: []
+      point: [4, 3, 2, 4, 5, 5, 3]
     }, {
       id: 1,
-      text: 'いいえ'
+      text: 'いいえ',
+      point: [4, 3, 2, 4, 5, 5, 3]
     }]
   }, {
     question: {
@@ -35852,10 +35854,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: []
+      point: [3, 2, 4, 3, 4, 4, 5]
     }, {
       id: 1,
-      text: 'いいえ'
+      text: 'いいえ',
+      point: [2, 3, 1, 2, 2, 2, 0]
     }]
   }, {
     question: {
@@ -35865,10 +35868,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: []
+      point: [3, 3, 4, 4, 5, 2, 5]
     }, {
       id: 1,
-      text: 'いいえ'
+      text: 'いいえ',
+      point: [2, 2, 1, 1, 0, 3, 0]
     }]
   }, {
     question: {
@@ -35878,10 +35882,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: []
+      point: [3, 5, 4, 2, 4, 5, 3]
     }, {
       id: 1,
-      text: 'いいえ'
+      text: 'いいえ',
+      point: [2, 0, 1, 3, 1, 0, 2]
     }]
   }, {
     question: {
@@ -35891,10 +35896,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: []
+      point: [5, 4, 3, 4, 2, 4, 4]
     }, {
       id: 1,
-      text: 'いいえ'
+      text: 'いいえ',
+      point: [0, 1, 2, 1, 3, 1, 1]
     }]
   }, {
     question: {
@@ -35904,23 +35910,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: []
+      point: [5, 4, 4, 3, 2, 4, 4]
     }, {
       id: 1,
-      text: 'いいえ'
-    }]
-  }, {
-    question: {
-      id: 7,
-      text: '手先が器用'
-    },
-    answers: [{
-      id: 0,
-      text: 'はい',
-      point: []
-    }, {
-      id: 1,
-      text: 'いいえ'
+      text: 'いいえ',
+      point: [0, 1, 1, 2, 3, 1, 1]
     }]
   }, {
     question: {
@@ -35930,10 +35924,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: []
+      point: [5, 3, 4, 4, 4, 4, 2]
     }, {
       id: 1,
-      text: 'いいえ'
+      text: 'いいえ',
+      point: [0, 2, 1, 1, 1, 1, 3]
     }]
   }, {
     question: {
@@ -35943,10 +35938,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: []
+      point: [3, 4, 5, 5, 4, 2, 3]
     }, {
       id: 1,
-      text: 'いいえ'
+      text: 'いいえ',
+      point: [2, 1, 0, 0, 1, 3, 2]
     }]
   }, {
     question: {
@@ -35956,10 +35952,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: []
+      point: [3, 4, 4, 5, 3, 3, 4]
     }, {
       id: 1,
-      text: 'いいえ'
+      text: 'いいえ',
+      point: [2, 1, 1, 0, 2, 2, 1]
     }]
   }],
   results: [{
@@ -36235,8 +36232,10 @@ exports.default = {
     //idを追加していく,3問目が終わったらelseへ
     if (state.questId < 10) {
       state.item = state.data[state.questId];
-      state.point += state.data[state.questId].point;
+      console.log(state.item);
+      // state.point += state.data[state.questId].point
       state.questId++;
+      console.log(state.item);
     } else {
       //idが加算されきったら、resultへ
       state.result = state.results.filter(function (item) {
