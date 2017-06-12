@@ -8,8 +8,9 @@ export default {
       state.answers.push(ans.id)
     }
     //idを追加していく,3問目が終わったらelseへ
-    if (state.questId < 2) {
+    if (state.questId < 10) {
       state.item = state.data[state.questId]
+      state.point += state.data[state.questId].point
       state.questId++
     } else {
         //idが加算されきったら、resultへ

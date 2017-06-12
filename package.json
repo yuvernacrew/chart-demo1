@@ -1,7 +1,6 @@
 {
   "name": "navi",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,8 +18,9 @@
     "npm": "^4.4.4",
     "url-loader": "^0.5.7",
     "vue-chartjs": "^2.5.6",
+    "vue-devtools": "^3.1.2",
     "vue-template-compiler": "^2.1.10",
-    "webpack": "^2.2.1",
+    "webpack": "^2.6.1",
     "webpack-dev-server": "^1.16.3"
   },
   "dependencies": {
@@ -28,5 +28,14 @@
     "vue-loader": "^10.2.3",
     "vue-router": "^2.2.0",
     "vuex": "^2.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuvernacrew/chart-demo1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yuvernacrew/chart-demo1/issues"
+  },
+  "homepage": "https://github.com/yuvernacrew/chart-demo1#readme",
+  "description": ""
 }

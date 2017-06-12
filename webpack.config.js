@@ -1,5 +1,3 @@
-
-
 module.exports = {
   entry: __dirname + "/src/main.js", //ビルドの起点になるファイルのパスを指定(配列で複数指定可能)
   output: {
