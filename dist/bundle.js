@@ -35599,7 +35599,7 @@ _vue2.default.use(_vuex2.default);
 
 var state = {
   questId: 0,
-  point: [],
+  points: [],
   answers: [],
   result: {},
   data: _constants2.default.data,
@@ -35694,6 +35694,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vuex__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_router__);
+//
 //
 //
 //
@@ -35816,6 +35817,11 @@ const top = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _ref;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //定数データを保管する。
 exports.default = {
   data: [{
@@ -35959,175 +35965,28 @@ exports.default = {
       point: [2, 1, 1, 0, 2, 2, 1]
     }]
   }],
-  results: [{
-    choice: [0, 0, 0],
+
+  results: [(_ref = {
     item: {
-      name: 'ステージ部署',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [4, 1, 2, 10, 6]
-        }]
-      },
-      discription: 'ばんばん当日も目立っていきたいあなたにオススメ！芸工祭をどんどん盛り上げてください！'
+      name: '飲食',
+      discription: 'カフェとバーです。'
     }
-  }, {
-    choice: [0, 0, 1],
-    item: {
-      name: 'ステージ部署',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [4, 1, 2, 10, 6]
-        }]
-      },
-      discription: 'ばんばん当日も目立っていきたいあなたにオススメ！芸工祭をどんどん盛り上げてください！'
-    }
-  }, {
-    choice: [0, 0, 2],
-    item: {
-      name: '運動会',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [2, 4, 4, 6, 10]
-        }]
-      },
-      discription: '当日はゆっくり、運動会の日にウェイウェイできる部署といえばこの部署！'
-    }
-  }, {
-    choice: [0, 1, 0],
-    item: {
-      name: 'ステージ部署',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [4, 1, 2, 10, 6]
-        }]
-      },
-      discription: 'ばんばん当日も目立っていきたいあなたにオススメ！芸工祭をどんどん盛り上げてください！'
-    }
-  }, {
-    choice: [0, 1, 1],
-    item: {
-      name: 'ステージ部署',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [4, 1, 2, 10, 6]
-        }]
-      },
-      discription: 'ばんばん当日も目立っていきたいあなたにオススメ！芸工祭をどんどん盛り上げてください！'
-    }
-  }, {
-    choice: [0, 1, 2],
-    item: {
-      name: '運動会',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [2, 4, 4, 6, 10]
-        }]
-      },
-      discription: '当日はゆっくり、運動会の日にウェイウェイできる部署といえばこの部署！'
-    }
-  }, {
-    choice: [1, 0, 0],
-    item: {
-      name: '会場部署',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [6, 2, 10, 5, 0]
-        }]
-      },
-      discription: '芸工祭の会場に彩りを。エクステリア、インテリア、ブース、ディレクションの4部署に分かれています。'
-    }
-  }, {
-    choice: [1, 0, 1],
-    item: {
-      name: 'カフェ部署',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [10, 1, 2, 4, 6]
-        }]
-      },
-      discription: 'カフェ部署は、インテリアの装飾などもします。当日も忙しいけど、達成感は一番味わえます！'
-    }
-  }, {
-    choice: [1, 0, 2],
-    item: {
-      name: '会場部署',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [2, 6, 10, 4, 4]
-        }]
-      },
-      discription: '芸工祭の会場に彩りを。エクステリア、インテリア、ブース、ディレクションの4部署に分かれています。'
-    }
-  }, {
-    choice: [1, 1, 0],
-    item: {
-      name: '広報部署',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [4, 10, 4, 4, 2]
-        }]
-      },
-      discription: '芸工祭を外部にアピール！映像、web、グラフィックの3部署に分かれています。'
-    }
-  }, {
-    choice: [1, 1, 1],
-    item: {
-      name: 'カフェ部署',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [10, 6, 2, 4, 2]
-        }]
-      },
-      discription: 'カフェ部署は、インテリアの装飾などもします。当日も忙しいけど、達成感は一番味わえます！'
-    }
-  }, {
-    choice: [1, 1, 2],
-    item: {
-      name: '広報部署',
-      chart: {
-        labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
-        datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
-          data: [2, 10, 6, 2, 4]
-        }]
-      },
-      discription: '芸工祭を外部にアピール！映像、web、グラフィックの3部署に分かれています。'
-    }
-  }]
+  }, _defineProperty(_ref, 'item', {
+    name: 'ステージ',
+    discription: '昼ステと夜ステが'
+  }), _defineProperty(_ref, 'item', {
+    name: '会場',
+    discription: 'インテリア、エクステリア、WS、ブース'
+  }), _defineProperty(_ref, 'item', {
+    name: 'PA',
+    discription: 'PAだよ、ですやんだよ'
+  }), _defineProperty(_ref, 'item', {
+    name: '運動会',
+    discription: '運動会は楽だよ'
+  }), _defineProperty(_ref, 'item', {
+    name: '幹部',
+    discription: '大変！'
+  }), _ref)]
 };
 
 /***/ }),
@@ -36227,15 +36086,14 @@ exports.default = {
   answer: function answer(state, ans) {
     if (state.answers.length < state.data.length) {
       //選ばれた選択肢をpush
-      state.answers.push(ans.id);
+      // state.answers.push(ans.id)
+      state.points += ans.point;
     }
     //idを追加していく,3問目が終わったらelseへ
     if (state.questId < 10) {
       state.item = state.data[state.questId];
-      console.log(state.item);
-      // state.point += state.data[state.questId].point
+      // state.points +=
       state.questId++;
-      console.log(state.item);
     } else {
       //idが加算されきったら、resultへ
       state.result = state.results.filter(function (item) {
@@ -36251,6 +36109,7 @@ exports.default = {
   //stateを空にする処理
   initialize: function initialize(state) {
     state.answers = [];
+    state.points = [];
     state.questId = 0;
   }
 };
@@ -48724,7 +48583,7 @@ exports = module.exports = __webpack_require__(17)();
 
 
 // module
-exports.push([module.i, "\nh2[data-v-6c7f77ad] {\n  font-weight: 200;\n  margin-bottom: 20px;\n}\n.title-container[data-v-6c7f77ad] {\n  margin-top: 35vh;\n}\n.start-btn > a[data-v-6c7f77ad] {\n  color: white;\n}\n\n", ""]);
+exports.push([module.i, "\nh2[data-v-6c7f77ad] {\n  font-weight: 200;\n  margin-bottom: 20px;\n}\n.title-container[data-v-6c7f77ad] {\n  margin-top: 35vh;\n}\n\n", ""]);
 
 // exports
 
@@ -48738,7 +48597,7 @@ exports = module.exports = __webpack_require__(17)();
 
 
 // module
-exports.push([module.i, "\n.question[data-v-6d02bd3e] {\n  margin-top: 160px;\n  font-size: 16px;\n  font-weight: 400;\n  padding-bottom: 10px;\n  border-bottom: 1px solid #aaa;\n  margin-bottom: 20px;\n}\n.answer-btn[data-v-6d02bd3e] {\n  margin-bottom: 10px;\n  font-weight: 200;\n}\n.answer-btn > a[data-v-6d02bd3e] {\n  color: #555;\n  text-decoration: none;\n}\n\n", ""]);
+exports.push([module.i, "\n.question[data-v-6d02bd3e] {\n  margin-top: 160px;\n  font-size: 16px;\n  font-weight: 400;\n  padding-bottom: 10px;\n  border-bottom: 1px solid #aaa;\n  margin-bottom: 20px;\n}\n.answer-btn[data-v-6d02bd3e] {\n  margin-bottom: 10px;\n  font-weight: 200;\n}\n.answer-btn > a[data-v-6d02bd3e] {\n  display: inline-block;\n  width: 100%;\n  color: #555;\n  text-decoration: none;\n}\n.bg-btn[data-v-6d02bd3e]:first-child {\n  background-color: #f0831e;\n  color: white;\n}\n\n", ""]);
 
 // exports
 
@@ -48752,7 +48611,7 @@ exports = module.exports = __webpack_require__(17)();
 
 
 // module
-exports.push([module.i, "\nbody {\n\tfont-family: \"Rounded Mplus 1c\";\n\tfont-weight: 200;\n\tbackground-color: #f4f4f4;\n}\n.wrapper {\n    padding: 5vw;\n    text-align: center;\n    max-width: 460px;\n    margin: 0 auto;\n}\n\n", ""]);
+exports.push([module.i, "\n.wrapper {\n    padding: 5vw;\n    text-align: center;\n    max-width: 460px;\n    margin: 0 auto;\n}\n\n", ""]);
 
 // exports
 
@@ -55438,7 +55297,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "title-container"
   }, [_c('h2', [_vm._v("適部署チャート")]), _vm._v(" "), _c('div', {
-    staticClass: "btn btn-primary btn-lg btn-block start-btn"
+    staticClass: "btn bg-orange"
   }, [_c('a', {
     on: {
       "click": _vm.onInitState
@@ -55470,7 +55329,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "question"
   }, [_vm._v("\n      Q" + _vm._s(_vm.$store.state.questId + 1) + "\n      " + _vm._s(_vm.$store.state.data[_vm.$store.state.questId].question.text) + "\n    ")]), _vm._v(" "), _vm._l((_vm.$store.state.data[_vm.$store.state.questId].answers), function(answer) {
     return _c('div', {
-      staticClass: "btn btn-default btn-lg btn-block answer-btn"
+      staticClass: "btn btn-default btn-lg btn-block answer-btn bg-btn"
     }, [_c('a', {
       on: {
         "click": function($event) {

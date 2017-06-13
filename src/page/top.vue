@@ -2,7 +2,7 @@
   <div class='wrapper'>
     <div class='title-container'>
       <h2>適部署チャート</h2>
-      <div class='btn btn-primary btn-lg btn-block start-btn'>
+      <div class='btn bg-orange'>
         <a @click="onInitState">
           <router-link class='btn-next' tag="div" to="/question">スタート！</router-link>
         </a>
@@ -33,10 +33,6 @@ export default top
 
   .title-container {
     margin-top: 35vh;
-  }
-
-  .start-btn > a {
-    color: white;
   }
 
 </style>

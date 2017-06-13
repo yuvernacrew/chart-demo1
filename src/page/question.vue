@@ -4,9 +4,9 @@
         Q{{ $store.state.questId + 1}}
         {{$store.state.data[$store.state.questId].question.text}}
       </div>
-      <div class='btn btn-default btn-lg btn-block answer-btn' v-for='answer in $store.state.data[$store.state.questId].answers'>
+      <div class='btn btn-default btn-lg btn-block answer-btn bg-btn' v-for='answer in $store.state.data[$store.state.questId].answers'>
         <a @click="onClickAnswer(answer)">{{answer.text}}</a>
-        <p>{{$store.state.data[$store.state.questId].answer.point}}</p>
+        <!-- <p>{{$store.state.data[$store.state.questId].answer.point}}</p> -->
       </div>
     </div>
 </template>
@@ -48,8 +48,9 @@ export default question
   }
 
   .answer-btn > a {
+    display: inline-block;
+    width: 100%;
     color: #555;
     text-decoration: none;
   }
-
 </style>
