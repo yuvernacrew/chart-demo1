@@ -9,15 +9,15 @@ export default {
 
       for(var i = 0 ; i < 7 ; i++){
         state.points[i] += ans.point[i]
-        console.log(state.points[i])
       }
       state.questId++
 
     } else {
-      var max= state.points.indexOf(Math.max.apply(null,state.points))
-      console.log(state.points)
-      console.log(max)
-      //resultに移動
+      //値がmaxのindexを代入
+      var max  = state.points.indexOf(Math.max.apply(null,state.points))
+
+      state.result = state.results[max]
+
       router.push('result')
     }
   },

@@ -166,7 +166,7 @@ export default {
     {
       question: {
         id: 10,
-        text: '細かい事務作業が苦ではない'
+        text: '自分を変えたいと思っている'
       },
       answers: [
         {
@@ -182,33 +182,41 @@ export default {
       ]
     }
   ],
-
   results: [
     {
-      item: {
-        name: '飲食',
-        discription: 'カフェとバーです。'
-      },
-      item: {
-        name: 'ステージ',
-        discription: '昼ステと夜ステがあるよ'
-      },
-      item: {
-        name: '会場',
-        discription: 'インテリア、エクステリア、WS、ブース'
-      },
-      item: {
-        name: 'PA',
-        discription: 'PAだよ、ですやんだよ'
-      },
-      item: {
-        name: '運動会',
-        discription: '運動会は楽だよ'
-      },
-      item: {
-        name: '幹部',
-        discription: '大変！'
-      }
+      id: 0,
+      name: '飲食',
+      discription: 'カフェとバーです。'
+    },
+    {
+      id: 1,
+      name: 'ステージ',
+      discription: '昼ステと夜ステがあるよ'
+    },
+    {
+      id: 2,
+      name: '会場',
+      discription: 'インテリア、エクステリア、WS、ブース'
+    },
+    {
+      id: 3,
+      name: '広報',
+      discription: '広報'
+    },
+    {
+      id: 4,
+      name: 'PA',
+      discription: 'PAだよ、ですやんだよ'
+    },
+    {
+      id: 5,
+      name: '運動会',
+      discription: '運動会は楽だよ'
+    },
+    {
+      id: 6,
+      name: '幹部',
+      discription: '大変！'
     }
   ]
 }

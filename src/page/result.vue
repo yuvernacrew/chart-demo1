@@ -1,11 +1,33 @@
 <template>
   <div class='wrapper'>
     <p>あなたにオススメな部署は...</p>
-    <div class='mb40' v-for='result in $store.state.result'>
-      <h2>{{result.item.name}}</h2>
-      <p>{{result.item.discription}}</p>
-      <commit-chart :data="result.item.chart" class='mb20'></commit-chart>
-    </div>
+
+    <h2>{{$store.state.result.name}}</h2>
+    <p>{{$store.state.result.discription}}</p>
+    <p>{{$store.state.points}}</p>
+
+    <commit-chart
+      :data="{
+        labels: ['飲食', 'ステージ', '会場', '広報', 'PA', '運動会','幹部'],
+        datasets: [
+          {
+            label: '適部署チャート',
+            backgroundColor: '#f87979',
+            data: $store.state.points
+          }
+        ]
+      }"
+      :options = "{
+        scales: {
+          ticks: {
+          beginAtZero: false,
+          min: 0,
+          max: 30
+          }
+       }
+      }"
+      ></commit-chart>
+
     <router-link class='btn btn-primary btn-lg btn-block' tag="div" to="/">はじめからやり直す</router-link>
   </div>
 </template>

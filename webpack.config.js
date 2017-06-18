@@ -27,6 +27,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.vue', 'vuex', '.json']
+    extensions: ['.js', '.vue', '.json']
   }
 };
