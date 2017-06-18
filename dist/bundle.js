@@ -35599,7 +35599,7 @@ _vue2.default.use(_vuex2.default);
 
 var state = {
   questId: 0,
-  points: [],
+  points: [0, 0, 0, 0, 0, 0, 0],
   answers: [],
   result: {},
   data: _constants2.default.data,
@@ -35665,7 +35665,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //   mounted () {
 //     // 下記データでグラフをレンダリング
 //     this.renderChart({
-//       labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
+//       labels: ['飲食', 'ステージ', '会場', '広報', 'PA', '運動会','幹部'],
 //       datasets: [
 //         {
 //           label: '適部署チャート',
@@ -35832,11 +35832,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: [3, 5, 3, 3, 4, 4, 4]
+      point: [2, 5, 3, 3, 2, 1, 4]
     }, {
       id: 1,
       text: 'いいえ',
-      point: [2, 0, 2, 2, 1, 1, 1]
+      point: [3, 0, 2, 2, 3, 4, 1]
     }]
   }, {
     question: {
@@ -35846,11 +35846,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: [4, 3, 2, 4, 5, 5, 3]
+      point: [5, 4, 2, 3, 4, 1, 3]
     }, {
       id: 1,
       text: 'いいえ',
-      point: [4, 3, 2, 4, 5, 5, 3]
+      point: [0, 1, 3, 2, 1, 4, 2]
     }]
   }, {
     question: {
@@ -35874,11 +35874,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: [3, 3, 4, 4, 5, 2, 5]
+      point: [4, 3, 4, 5, 2, 2, 5]
     }, {
       id: 1,
       text: 'いいえ',
-      point: [2, 2, 1, 1, 0, 3, 0]
+      point: [1, 2, 1, 0, 3, 3, 0]
     }]
   }, {
     question: {
@@ -35888,11 +35888,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: [3, 5, 4, 2, 4, 5, 3]
+      point: [5, 5, 3, 1, 4, 5, 3]
     }, {
       id: 1,
       text: 'いいえ',
-      point: [2, 0, 1, 3, 1, 0, 2]
+      point: [0, 0, 2, 4, 1, 0, 2]
     }]
   }, {
     question: {
@@ -35902,11 +35902,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: [5, 4, 3, 4, 2, 4, 4]
+      point: [5, 2, 3, 4, 1, 2, 4]
     }, {
       id: 1,
       text: 'いいえ',
-      point: [0, 1, 2, 1, 3, 1, 1]
+      point: [0, 3, 2, 1, 4, 3, 1]
     }]
   }, {
     question: {
@@ -35916,11 +35916,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: [5, 4, 4, 3, 2, 4, 4]
+      point: [3, 5, 4, 2, 2, 5, 2]
     }, {
       id: 1,
       text: 'いいえ',
-      point: [0, 1, 1, 2, 3, 1, 1]
+      point: [2, 0, 1, 3, 3, 0, 3]
     }]
   }, {
     question: {
@@ -35930,11 +35930,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: [5, 3, 4, 4, 4, 4, 2]
+      point: [4, 3, 5, 3, 3, 2, 3]
     }, {
       id: 1,
       text: 'いいえ',
-      point: [0, 2, 1, 1, 1, 1, 3]
+      point: [1, 2, 0, 2, 2, 3, 2]
     }]
   }, {
     question: {
@@ -35944,11 +35944,11 @@ exports.default = {
     answers: [{
       id: 0,
       text: 'はい',
-      point: [3, 4, 5, 5, 4, 2, 3]
+      point: [3, 2, 5, 5, 4, 1, 4]
     }, {
       id: 1,
       text: 'いいえ',
-      point: [2, 1, 0, 0, 1, 3, 2]
+      point: [2, 3, 0, 0, 1, 4, 1]
     }]
   }, {
     question: {
@@ -35973,7 +35973,7 @@ exports.default = {
     }
   }, _defineProperty(_ref, 'item', {
     name: 'ステージ',
-    discription: '昼ステと夜ステが'
+    discription: '昼ステと夜ステがあるよ'
   }), _defineProperty(_ref, 'item', {
     name: '会場',
     discription: 'インテリア、エクステリア、WS、ブース'
@@ -36084,23 +36084,19 @@ var router = new _vueRouter2.default();
 
 exports.default = {
   answer: function answer(state, ans) {
-    if (state.answers.length < state.data.length) {
-      //選ばれた選択肢をpush
-      // state.answers.push(ans.id)
-      state.points += ans.point;
-    }
-    //idを追加していく,3問目が終わったらelseへ
-    if (state.questId < 10) {
-      state.item = state.data[state.questId];
-      // state.points +=
+    if (state.answers.length + 1 < state.data.length) {
+
+      state.answers.push(ans.id);
+
+      for (var i = 0; i < 7; i++) {
+        state.points[i] += ans.point[i];
+        console.log(state.points[i]);
+      }
       state.questId++;
     } else {
-      //idが加算されきったら、resultへ
-      state.result = state.results.filter(function (item) {
-        if (item.choice.toString() === state.answers.toString()) {
-          return item;
-        }
-      });
+      var max = state.points.indexOf(Math.max.apply(null, state.points));
+      console.log(state.points);
+      console.log(max);
       //resultに移動
       router.push('result');
     }
@@ -36109,7 +36105,7 @@ exports.default = {
   //stateを空にする処理
   initialize: function initialize(state) {
     state.answers = [];
-    state.points = [];
+    state.points = [0, 0, 0, 0, 0, 0, 0];
     state.questId = 0;
   }
 };
@@ -48597,7 +48593,7 @@ exports = module.exports = __webpack_require__(17)();
 
 
 // module
-exports.push([module.i, "\n.question[data-v-6d02bd3e] {\n  margin-top: 160px;\n  font-size: 16px;\n  font-weight: 400;\n  padding-bottom: 10px;\n  border-bottom: 1px solid #aaa;\n  margin-bottom: 20px;\n}\n.answer-btn[data-v-6d02bd3e] {\n  margin-bottom: 10px;\n  font-weight: 200;\n}\n.answer-btn > a[data-v-6d02bd3e] {\n  display: inline-block;\n  width: 100%;\n  color: #555;\n  text-decoration: none;\n}\n.bg-btn[data-v-6d02bd3e]:first-child {\n  background-color: #f0831e;\n  color: white;\n}\n\n", ""]);
+exports.push([module.i, "\n.question[data-v-6d02bd3e] {\n  margin-top: 160px;\n  font-size: 16px;\n  font-weight: 400;\n  padding-bottom: 10px;\n  border-bottom: 1px solid #aaa;\n  margin-bottom: 20px;\n}\n.answer-btn[data-v-6d02bd3e] {\n  margin-bottom: 10px;\n  font-weight: 200;\n}\n.answer-btn > a[data-v-6d02bd3e] {\n  display: inline-block;\n  width: 100%;\n  color: #555;\n  text-decoration: none;\n}\n", ""]);
 
 // exports
 

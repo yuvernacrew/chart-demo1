@@ -3,23 +3,20 @@ const router = new VueRouter()
 
 export default {
   answer (state, ans) {
-    if (state.answers.length < state.data.length) {
-      //選ばれた選択肢をpush
-      // state.answers.push(ans.id)
-      state.points += ans.point
-    }
-    //idを追加していく,3問目が終わったらelseへ
-    if (state.questId < 10) {
-      state.item = state.data[state.questId]
-      // state.points +=
+    if (state.answers.length + 1 < state.data.length) {
+
+      state.answers.push(ans.id)
+
+      for(var i = 0 ; i < 7 ; i++){
+        state.points[i] += ans.point[i]
+        console.log(state.points[i])
+      }
       state.questId++
+
     } else {
-        //idが加算されきったら、resultへ
-        state.result = state.results.filter((item) => {
-        if (item.choice.toString() === state.answers.toString()) {
-          return item
-        }
-      })
+      var max= state.points.indexOf(Math.max.apply(null,state.points))
+      console.log(state.points)
+      console.log(max)
       //resultに移動
       router.push('result')
     }
@@ -27,7 +24,7 @@ export default {
   //stateを空にする処理
   initialize (state) {
     state.answers = []
-    state.points = []
+    state.points = [0, 0, 0, 0, 0, 0, 0]
     state.questId = 0
   }
 }

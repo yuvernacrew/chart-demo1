@@ -5,7 +5,7 @@ import { Radar } from 'vue-chartjs'
 //   mounted () {
 //     // 下記データでグラフをレンダリング
 //     this.renderChart({
-//       labels: ['カフェ', '広報', '会場', 'ステージ', '運動会'],
+//       labels: ['飲食', 'ステージ', '会場', '広報', 'PA', '運動会','幹部'],
 //       datasets: [
 //         {
 //           label: '適部署チャート',
