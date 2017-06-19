@@ -35756,6 +35756,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -55269,22 +55273,26 @@ module.exports = Component.exports
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "wrapper"
-  }, [_c('p', [_vm._v("あなたにオススメな部署は...")]), _vm._v(" "), _c('h2', [_vm._v(_vm._s(_vm.$store.state.result.name))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.$store.state.result.discription))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.$store.state.points))]), _vm._v(" "), _c('commit-chart', {
+  }, [_c('p', [_vm._v("あなたにオススメな部署は...")]), _vm._v(" "), _c('h2', [_vm._v(_vm._s(_vm.$store.state.result.name))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.$store.state.result.discription))]), _vm._v(" "), _c('commit-chart', {
     attrs: {
       "data": {
         labels: ['飲食', 'ステージ', '会場', '広報', 'PA', '運動会', '幹部'],
         datasets: [{
-          label: '適部署チャート',
-          backgroundColor: '#f87979',
+          backgroundColor: '#f0831e',
           data: _vm.$store.state.points
         }]
       },
       "options": {
-        scales: {
-          ticks: {
+        legend: {
+          display: false
+        },
+        scale: {
+          scaleLabel: false,
+          ticks: { //http://www.chartjs.org/docs/#scales-radial-linear-scale
+            stepSize: 5, // 目盛の間隔
+            max: 40, //最大値
+            min: 10,
             beginAtZero: false,
-            min: 0,
-            max: 30
           }
         }
       }
