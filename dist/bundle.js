@@ -35695,6 +35695,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -35706,7 +35707,7 @@ const question = {
     if (redirect.path === '/') {
       next();
     } else {
-      router.push('/');
+      window.location.href = '/';
     }
   },
   methods: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_vuex__["mapActions"])(['onClickAnswer'])
@@ -35759,8 +35760,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-
 
 
 
@@ -35796,6 +35795,8 @@ const result = {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vuex__);
+//
+//
 //
 //
 //
@@ -35976,31 +35977,31 @@ exports.default = {
   results: [{
     id: 0,
     name: '飲食',
-    discription: 'カフェとバーです。'
+    discription: '『カフェ』『BAR』の２つの部署のことです。BAR部署の募集はありません'
   }, {
     id: 1,
     name: 'ステージ',
-    discription: '昼ステと夜ステがあるよ'
+    discription: '芸工祭の当日のステージを企画する『昼ステ』『夜ステ』の２つの部署のことです。とにかく楽しく明るい部署です。'
   }, {
     id: 2,
     name: '会場',
-    discription: 'インテリア、エクステリア、WS、ブース'
+    discription: '芸工祭を彩る『インテリア』『エクステリア』『ディレクション』『ブース』『ワークショップ』の5つの部署のことです。MNO関係なくみんなで楽しく活動します'
   }, {
     id: 3,
     name: '広報',
-    discription: '広報'
+    discription: '芸工祭をみんなに発信する『グラフィック』『映像』『WEB』の３つの部署のことです。実際にみんなで制作をしていきます。'
   }, {
     id: 4,
     name: 'PA',
-    discription: 'PAだよ、ですやんだよ'
+    discription: 'これで君も『teamですやん』だ！'
   }, {
     id: 5,
     name: '運動会',
-    discription: '運動会は楽だよ'
+    discription: 'みんなで運動会を盛り上げてこーぜ！！'
   }, {
     id: 6,
     name: '幹部',
-    discription: '大変！'
+    discription: '芸工祭を支える『祭長』『副祭長』『会計』『書記』『総務』のことです。残念ながら１・２年の募集はないです。'
   }]
 };
 
@@ -36110,9 +36111,7 @@ exports.default = {
     } else {
       //値がmaxのindexを代入
       var max = state.points.indexOf(Math.max.apply(null, state.points));
-
       state.result = state.results[max];
-
       router.push('result');
     }
   },
@@ -48580,7 +48579,7 @@ exports = module.exports = __webpack_require__(18)();
 
 
 // module
-exports.push([module.i, "\nh2[data-v-2490c5f5] {\n    margin-top: 20px;\n    font-size: 16px;\n    font-weight: 400;\n    padding-bottom: 10px;\n    border-bottom: 1px solid #aaa;\n    margin-bottom: 20px;\n}\n.mb20[data-v-2490c5f5] {\n  margin-bottom: 20px;\n}\n\n", ""]);
+exports.push([module.i, "\n.text-label[data-v-2490c5f5] {\n  margin-bottom: 0;\n}\nh2[data-v-2490c5f5] {\n    margin-top: 10px;\n    font-size: 16px;\n    font-weight: 400;\n    padding-bottom: 10px;\n    border-bottom: 1px solid #aaa;\n    margin-bottom: 20px;\n}\np[data-v-2490c5f5] {\n  line-height: 1.6;\n}\n.mb20[data-v-2490c5f5] {\n  margin-bottom: 20px;\n}\n.max-part[data-v-2490c5f5] {\n  font-size: 32px;\n}\n\n", ""]);
 
 // exports
 
@@ -48594,7 +48593,7 @@ exports = module.exports = __webpack_require__(18)();
 
 
 // module
-exports.push([module.i, "\nh2[data-v-6c7f77ad] {\n  font-weight: 200;\n  margin-bottom: 20px;\n}\n.title-container[data-v-6c7f77ad] {\n  margin-top: 35vh;\n}\n\n", ""]);
+exports.push([module.i, "\n.wrapper[data-v-6c7f77ad] {\n  position: relative;\n  height: 100vh;\n}\n.title-container[data-v-6c7f77ad] {\n  position: absolute;\n  top: 42%;\n  left: 10%;\n  -webkit-transform: translateY(-50%);\n  transform: translateY(-50%);\n}\nh2[data-v-6c7f77ad] {\n  font-weight: 200;\n  margin-bottom: 20px;\n}\n.title-img[data-v-6c7f77ad] {\n  width: 80vw;\n}\n.mb20[data-v-6c7f77ad] {\n  margin-bottom: 20px;\n}\n\n", ""]);
 
 // exports
 
@@ -48608,7 +48607,7 @@ exports = module.exports = __webpack_require__(18)();
 
 
 // module
-exports.push([module.i, "\n.question[data-v-6d02bd3e] {\n  margin-top: 160px;\n  font-size: 16px;\n  font-weight: 400;\n  padding-bottom: 10px;\n  border-bottom: 1px solid #aaa;\n  margin-bottom: 20px;\n}\n.answer-btn[data-v-6d02bd3e] {\n  margin-bottom: 10px;\n  font-weight: 200;\n}\n.answer-btn > a[data-v-6d02bd3e] {\n  display: inline-block;\n  width: 100%;\n  color: #555;\n  text-decoration: none;\n}\n", ""]);
+exports.push([module.i, "\n.wrapper[data-v-6d02bd3e] {\n  position: relative;\n  height: 100vh;\n}\n.title-container[data-v-6d02bd3e] {\n  position: absolute;\n  top: 42%;\n  left: 10%;\n  -webkit-transform: translateY(-50%);\n  transform: translateY(-50%);\n}\n.question[data-v-6d02bd3e] {\n  margin-top: 160px;\n  font-size: 16px;\n  font-weight: 400;\n  padding-bottom: 10px;\n  border-bottom: 1px solid #aaa;\n  margin-bottom: 20px;\n}\n.answer-btn[data-v-6d02bd3e] {\n  margin-bottom: 10px;\n  font-weight: 200;\n}\n.answer-btn > a[data-v-6d02bd3e] {\n  display: inline-block;\n  width: 100%;\n  color: #555;\n  text-decoration: none;\n}\n", ""]);
 
 // exports
 
@@ -55273,7 +55272,12 @@ module.exports = Component.exports
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "wrapper"
-  }, [_c('p', [_vm._v("あなたにオススメな部署は...")]), _vm._v(" "), _c('h2', [_vm._v(_vm._s(_vm.$store.state.result.name))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.$store.state.result.discription))]), _vm._v(" "), _c('commit-chart', {
+  }, [_c('p', {
+    staticClass: "text-label"
+  }, [_vm._v("あなたにオススメな部署は...")]), _vm._v(" "), _c('h2', {
+    staticClass: "max-part"
+  }, [_vm._v(_vm._s(_vm.$store.state.result.name))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.$store.state.result.discription))]), _vm._v(" "), _c('commit-chart', {
+    staticClass: "mb20",
     attrs: {
       "data": {
         labels: ['飲食', 'ステージ', '会場', '広報', 'PA', '運動会', '幹部'],
@@ -55284,11 +55288,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       },
       "options": {
         legend: {
-          display: false
+          display: false,
         },
         scale: {
           scaleLabel: false,
-          ticks: { //http://www.chartjs.org/docs/#scales-radial-linear-scale
+          ticks: {
             stepSize: 5, // 目盛の間隔
             max: 40, //最大値
             min: 10,
@@ -55322,7 +55326,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "wrapper"
   }, [_c('div', {
     staticClass: "title-container"
-  }, [_c('h2', [_vm._v("適部署チャート")]), _vm._v(" "), _c('div', {
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('div', {
     staticClass: "btn bg-orange"
   }, [_c('a', {
     on: {
@@ -55335,7 +55339,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "to": "/question"
     }
   }, [_vm._v("スタート！")])], 1)])])])
-},staticRenderFns: []}
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('h2', [_c('img', {
+    staticClass: "title-img",
+    attrs: {
+      "src": "asset/img/logo-img.png"
+    }
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', {
+    staticClass: "mb20"
+  }, [_vm._v("10問の問いに答えていただいて"), _c('br'), _vm._v("\n      あなたに合う部署を分析します。")])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -55352,6 +55367,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "wrapper"
   }, [_c('div', {
+    staticClass: "question-container"
+  }, [_c('div', {
     staticClass: "question"
   }, [_vm._v("\n      Q" + _vm._s(_vm.$store.state.questId + 1) + "\n      " + _vm._s(_vm.$store.state.data[_vm.$store.state.questId].question.text) + "\n    ")]), _vm._v(" "), _vm._l((_vm.$store.state.data[_vm.$store.state.questId].answers), function(answer) {
     return _c('div', {
@@ -55363,7 +55380,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         }
       }
     }, [_vm._v(_vm._s(answer.text))])])
-  })], 2)
+  })], 2)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

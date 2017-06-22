@@ -1,5 +1,6 @@
 <template>
   <div class='wrapper'>
+    <div class='question-container'>
       <div class='question'>
         Q{{ $store.state.questId + 1}}
         {{$store.state.data[$store.state.questId].question.text}}
@@ -8,7 +9,7 @@
         <a @click="onClickAnswer(answer)">{{answer.text}}</a>
         <!-- <p>{{$store.state.data[$store.state.questId].answer.point}}</p> -->
       </div>
-    </div>
+  </div>
 </template>
 
 
@@ -23,7 +24,7 @@ const question = {
     if (redirect.path === '/') {
       next()
     } else {
-      router.push('/')
+      window.location.href = '/'
     }
   },
   methods: mapActions([
@@ -34,6 +35,19 @@ export default question
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .wrapper {
+    position: relative;
+    height: 100vh;
+  }
+
+  .title-container {
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
   .question {
     margin-top: 160px;
     font-size: 16px;

@@ -15,9 +15,7 @@ export default {
     } else {
       //値がmaxのindexを代入
       var max  = state.points.indexOf(Math.max.apply(null,state.points))
-
       state.result = state.results[max]
-
       router.push('result')
     }
   },

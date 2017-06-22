@@ -186,37 +186,37 @@ export default {
     {
       id: 0,
       name: '飲食',
-      discription: 'カフェとバーです。'
+      discription: '『カフェ』『BAR』の２つの部署のことです。BAR部署の募集はありません'
     },
     {
       id: 1,
       name: 'ステージ',
-      discription: '昼ステと夜ステがあるよ'
+      discription: '芸工祭の当日のステージを企画する『昼ステ』『夜ステ』の２つの部署のことです。とにかく楽しく明るい部署です。'
     },
     {
       id: 2,
       name: '会場',
-      discription: 'インテリア、エクステリア、WS、ブース'
+      discription: '芸工祭を彩る『インテリア』『エクステリア』『ディレクション』『ブース』『ワークショップ』の5つの部署のことです。MNO関係なくみんなで楽しく活動します'
     },
     {
       id: 3,
       name: '広報',
-      discription: '広報'
+      discription: '芸工祭をみんなに発信する『グラフィック』『映像』『WEB』の３つの部署のことです。実際にみんなで制作をしていきます。'
     },
     {
       id: 4,
       name: 'PA',
-      discription: 'PAだよ、ですやんだよ'
+      discription: 'これで君も『teamですやん』だ！'
     },
     {
       id: 5,
       name: '運動会',
-      discription: '運動会は楽だよ'
+      discription: 'みんなで運動会を盛り上げてこーぜ！！'
     },
     {
       id: 6,
       name: '幹部',
-      discription: '大変！'
+      discription: '芸工祭を支える『祭長』『副祭長』『会計』『書記』『総務』のことです。残念ながら１・２年の募集はないです。'
     }
   ]
 }

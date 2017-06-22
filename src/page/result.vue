@@ -1,8 +1,8 @@
 <template>
   <div class='wrapper'>
-    <p>あなたにオススメな部署は...</p>
+    <p class='text-label'>あなたにオススメな部署は...</p>
 
-    <h2>{{$store.state.result.name}}</h2>
+    <h2 class='max-part'>{{$store.state.result.name}}</h2>
     <p>{{$store.state.result.discription}}</p>
 
     <commit-chart
@@ -17,11 +17,11 @@
       }"
       :options = "{
         legend: {
-          display: false
+          display: false,
         },
         scale: {
           scaleLabel: false,
-          ticks: { //http://www.chartjs.org/docs/#scales-radial-linear-scale
+          ticks: {
             stepSize: 5, // 目盛の間隔
             max: 40, //最大値
             min: 10,
@@ -29,16 +29,14 @@
            }
         }
       }"
-      ></commit-chart>
+      class='mb20'></commit-chart>
 
     <router-link class='btn btn-primary btn-lg btn-block' tag="div" to="/">はじめからやり直す</router-link>
   </div>
 </template>
-<script src="https://unpkg.com/vue-chartjs@2.6.0/dist/vue-chartjs.full.min.js"></script>
 <script>
   import { mapActions } from 'vuex'
   import CommitChart from '../components/CommitChart'
-
   const result = {
     name: 'result',
     beforeRouteEnter (route, redirect, next) {
@@ -63,10 +61,16 @@
       CommitChart
     }
   }
+
 </script>
 <style scoped>
+
+.text-label {
+  margin-bottom: 0;
+}
+
 h2 {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 10px;
@@ -74,8 +78,16 @@ h2 {
     margin-bottom: 20px;
   }
 
+p {
+  line-height: 1.6;
+}
+
 .mb20 {
   margin-bottom: 20px;
+}
+
+.max-part {
+  font-size: 32px;
 }
 
 </style>
